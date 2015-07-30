@@ -1,0 +1,54 @@
+# specify train or test model, used for both master and slaves
+train_model = true
+test_model = false
+debug_mode = 0
+random_start = true
+random_seed = 1 # used for net weights initialization and training data sampling
+
+# Master or parallel training options
+batchNum = 5
+percentage = 0.3
+masterMinImprovement = 1.0001
+use_hpc = true
+slave_bin = //fbl/nas/HOME/zhihuang/work/RNNLM/x64/Release/RNNLM.exe
+warm_start = true
+warm_start_train_file = //fbl/nas/HOME/zhihuang/work/RNNParaExp/pennTreebank/ptb.train.txt
+tolerance = 1.1 # room provided for slave RNN model going worse
+master_para_adapt = true # automatically tuning below three parameters in RNN model average
+master_learning_rate = 1
+master_regularization = 0
+master_momentum = 0
+
+train_file = //fbl/nas/HOME/zhihuang/work/RNNParaExp/pennTreebank/ptb.train.txt
+valid_file = //fbl/nas/HOME/zhihuang/work/RNNParaExp/pennTreebank/ptb.valid.txt
+test_file = //fbl/nas/HOME/zhihuang/work/RNNParaExp/pennTreebank/ptb.test.txt
+rnnlm_file = //fbl/nas/HOME/zhihuang/work/RNNParaExp/pennTreebank/modelRnn
+
+file_binary = true
+
+# class file is used if class_file is set. Otherwise, classes are 
+# used with parameters class_size and old_classes
+# class_file = //fbl/nas/HOME/zhihuang/RNNParaExp/ispeech100KBatch/s06.04.train100K.classes          
+class_size = 50
+old_classes = false
+
+# : seperated ids
+context_ids = -1 
+# context_ids = 1
+
+gradient_cutoff = 15
+starting_alpha = 0.1
+regularization = 0.0000001
+min_improvement = 1.0002
+maxIter = 0
+hidden_size = 100
+compression_size = 0
+direct = 50000000
+direct_order = 3
+direct_word_size = 0
+direct_class_size = 0
+bptt = 5
+bptt_block = 10
+gen = 0
+savewp = 0            
+independent = true

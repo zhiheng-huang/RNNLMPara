@@ -1,0 +1,40 @@
+# specify train or test model, used for both master and slaves
+train_model = true
+test_model = true
+debug_mode = 0
+random_start = true
+random_seed = 1 # used for net weights initialization and training data sampling
+
+train_file = /Users/zhiheng/code/RNNLMPara/RNNOrigExp/LyricsJielunZhou/trainSeg
+valid_file = /Users/zhiheng/code/RNNLMPara/RNNOrigExp/LyricsJielunZhou/trainSeg
+test_file = /Users/zhiheng/code/RNNLMPara/RNNOrigExp/LyricsJielunZhou/trainSeg
+rnnlm_file = /Users/zhiheng/code/RNNLMPara/RNNOrigExp/LyricsJielunZhou/modelRnn
+
+file_binary = true
+
+# class file is used if class_file is set. Otherwise, classes are
+# used with parameters class_size and old_classes
+# class_file = //fbl/nas/HOME/zhihuang/RNNOrigExp/ispeech100KBatch/s06.04.train100K.classes
+class_size = 50
+old_classes = false
+
+# : seperated ids
+context_ids = -1
+# context_ids = 1
+
+gradient_cutoff = 15
+starting_alpha = 0.1
+regularization = 0.000001
+min_improvement = 1.0002
+maxIter = 0
+hidden_size = 100
+compression_size = 0
+direct = 10000000
+direct_order = 3
+direct_word_size = 0
+direct_class_size = 0
+bptt = 5
+bptt_block = 10
+gen = 200
+savewp = 0
+independent = true
