@@ -32,6 +32,6 @@ To build, run `build.sh` to generate the binary at `Release/RNNLMPara`
 ### Experiments
 See `RNNOrigExp/runPennTreebank.sh` and `RNNParaExp/readme.txt` for experiments. 
 
-
-
+## Contact
+Please send your questions/comments to zhiheng.huang@gmail.com
 
