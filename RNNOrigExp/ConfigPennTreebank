@@ -15,7 +15,8 @@ file_binary = true
 # class file is used if class_file is set. Otherwise, classes are
 # used with parameters class_size and old_classes
 # class_file = //fbl/nas/HOME/zhihuang/RNNOrigExp/ispeech100KBatch/s06.04.train100K.classes
-class_size = 50
+# super_class_size = 20
+class_size = 100
 old_classes = false
 
 # : seperated ids
