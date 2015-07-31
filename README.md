@@ -22,7 +22,7 @@ super classes: even or frequency based.
 
 6) Master model update after done with HPC slave RNN model training
 
-See RNNOrigExp/runPennTreebank.sh and RNNParaExp/readme.txt for experiments. 
+To build, run build.sh to generate the binary at Release/RNNLMPara. Then see RNNOrigExp/runPennTreebank.sh and RNNParaExp/readme.txt for experiments. 
 
 
 
