@@ -1,28 +1,36 @@
 # RNNLMPara
-Parallel RNN trainer implementes of the following paper
+## Why this tool?
 
+Parallel RNN trainer implementes the following paper
+
+```bash
 Z. H.  Huang, G. Zweig, M. Levit, B. Dumoulin, B. Oguz and S. Chang, Accelerating Recurrent Neural 
 Network Training via Two Stage Classes and Parallelization, in Automatic Speech Recognition and 
 Understanding (ASRU), 2013.
+```
 
-RNN parallel training by dispatching multiple HPC jobs for slave RNN training. Code is developed 
-based on Recurrent neural network based statistical language modeling toolkit Version 0.3f (Tomas 
-Mikolov). The following changes are made
+Two stage class RNNs and parallel RNNs not only result in equal or lower WERs compared to original RNNs but also accelerate training by 2 and 10 times respectively. Code is developed based on [RNNLM 0.3e (Tomas Mikolov)](http://www.fit.vutbr.cz/~imikolov/rnnlm/). The following changes are made
 
-1) Separate Vocab part to a class
+  1) Separate Vocab part to a class
 
-2) Add two stage class (super class and class) to speed up training. Two options to generate 
-super classes: even or frequency based.
+  2) Add two stage class (super class and class) to speed up training. Two options to generate 
+  super classes: even or frequency based.
 
-3) new Maxent feature hash function
+  3) new Maxent feature hash function
 
-4) Explicit RNN constructors from random initialization or from model file
+  4) Explicit RNN constructors from random initialization or from model file
 
-5) Submit HPC jobs to train slave RNN models
+  5) Submit HPC jobs to train slave RNN models
 
-6) Master model update after done with HPC slave RNN model training
+  6) Master model update after done with HPC slave RNN model training
 
-To build, run build.sh to generate the binary at Release/RNNLMPara. Then see RNNOrigExp/runPennTreebank.sh and RNNParaExp/readme.txt for experiments. 
+## Usage
+
+### Build
+To build, run `build.sh` to generate the binary at `Release/RNNLMPara`
+
+### Experiments
+See `RNNOrigExp/runPennTreebank.sh` and `RNNParaExp/readme.txt` for experiments. 
 
 
 
