@@ -1,7 +1,7 @@
 # RNNLMPara
 ## Why this tool?
 
-Parallel RNN trainer implementes the following paper
+Parallel RNN trainer implementes Two stage class RNNs and parallel RNNs proposed in the following paper
 
 ```bash
 Z. H.  Huang, G. Zweig, M. Levit, B. Dumoulin, B. Oguz and S. Chang, Accelerating Recurrent Neural 
@@ -9,7 +9,7 @@ Network Training via Two Stage Classes and Parallelization, in Automatic Speech 
 Understanding (ASRU), 2013.
 ```
 
-Two stage class RNNs and parallel RNNs not only result in equal or lower WERs compared to original RNNs but also accelerate training by 2 and 10 times respectively. Code is developed based on [RNNLM 0.3e (Tomas Mikolov)](http://www.fit.vutbr.cz/~imikolov/rnnlm/). The following changes are made
+Two stage class RNNs uses two stage classes (super classes and classes) as opposed to one class. Parallel RNN trainer splits the training data into batches and then dispatchs jobs to multiple CPUs/nodes for slave models training. Two stage class RNNs and parallel RNNs not only result in equal or lower WERs compared to original RNNs but also accelerate training by 2 and 10 times respectively. Code is developed based on [RNNLM 0.3e (Tomas Mikolov)](http://www.fit.vutbr.cz/~imikolov/rnnlm/). The following changes are made
 
   1) Separate Vocab part to a class
 
